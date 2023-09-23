@@ -1,0 +1,33 @@
+name: Minify code and deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Minify HTML
+        run: |
+          npx html-minifier --input-dir ./ --output-dir ./deployment --collapse-whitespace --remove-comments
+        working-directory: .
+
+      - name: Minify CSS
+        run: |
+          npx csso ./css/main.css -o ./deployment/css/main.min.css
+        working-directory: .
+
+      - name: Commit and push to deployment branch
+        run: |
+          git config user.name "Aman Raj Rana"
+          git config user.email "mail2amanrana@gmail.com"
+          git checkout deployment
+          git add .
+          git commit -m "Minify code"
+          git push origin deployment
