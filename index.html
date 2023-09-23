@@ -5,31 +5,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- link stylesheet  -->
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/fontFamily.css">
+    <link rel="stylesheet" href="./css/768px/main.css" media="(max-width: 768px)">
+    <!-- link stylesheet  -->
+
     <title>Talent Hunt Software Solution</title>
+    <script src="https://kit.fontawesome.com/153de96bac.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <!-- ==========Header START======== -->
     <header>
 
-        <nav class="container">
+        <div class="container">
             <!-- logo -->
             <h1>
                 amanRaj
             </h1>
-            <ul>
-                <li><a class="underline-hover active" href="#">Home</a></li>
-                <li><a class="underline-hover" href="#">About</a></li>
-                <li><a class="underline-hover" href="#">Courses</a></li>
-                <li><a class="underline-hover" href="#">Highlight</a></li>
-                <li><a class="underline-hover" href="#"> Us</a></li>
-            </ul>
-            <button class="btn btn-pink">
-                Contact
-            </button>
-        </nav>
+            <Nav class="navbar">
+                <ul class="nav-items">
+                    <li class="nav-item"><a class="underline-hover active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="underline-hover" href="#">About</a></li>
+                    <li class="nav-item"><a class="underline-hover" href="#">Courses</a></li>
+                    <li class="nav-item"><a class="underline-hover" href="#">Highlight</a></li>
+                    <li class="nav-item"><a class="underline-hover" href="#"> Us</a></li>
+                    <li class="nav-item"><button class="btn btn-pink">Contact</button></li>
+                </ul>
+            </Nav>
+
+            <!-- hamburger menu -->
+            <div class="hamburger">
+                <span class="line line-1"></span>
+                <span class="line line-2"></span>
+                <span class="line line-3"></span>
+            </div>
+
+        </div>
     </header>
 
     <main>
@@ -47,10 +59,15 @@
                     </p>
 
                     <!-- Input box  -->
-                    <div class="email-box">
-                        <img src="./assets/icons/envelope-regular.svg" alt="envelope-regular">
-                        <input type="email" name="email" id="email">
-                        <button class="btn btn-pink">Get in touch</button>
+                    <div class="contact-box">
+                        <a class="btn btn-pink" href="https://wa.me/+91998877665">
+                            <i class="fa-brands fa-whatsapp"></i>
+                            +91 9876543210
+                        </a>
+                        <a class="btn btn-pink" href="tel:+91998877665">
+                            <i class="fa-solid fa-phone-volume"></i>
+                            +91 9876543210
+                        </a>
                     </div>
                 </div>
                 <div class="left-container">
@@ -80,6 +97,7 @@
         </section> -->
     </main>
     <!-- <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script> -->
+    <script src="./script/script.js"></script>
 </body>
 
 </html>
